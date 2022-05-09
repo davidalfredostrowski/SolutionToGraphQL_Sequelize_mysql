@@ -1,0 +1,13 @@
+
+ubuntu@ip-172-31-33-160:~/graphbook/graphql$ cat typeDefs.graphql
+type Query {
+  getUsers: [user]
+}
+
+type user {
+  user_id: Int
+  username: String
+  password: String
+  age: String
+}
+ubuntu@ip-172-31-33-160:~/graphbook/graphql$

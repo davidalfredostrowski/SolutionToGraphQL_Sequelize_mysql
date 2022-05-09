@@ -1,0 +1,11 @@
+ cat typeDefs.graphql
+type Query {
+  getUsers: [user]
+}
+
+type user {
+  user_id: Int
+  username: String
+  password: String
+  age: String
+}

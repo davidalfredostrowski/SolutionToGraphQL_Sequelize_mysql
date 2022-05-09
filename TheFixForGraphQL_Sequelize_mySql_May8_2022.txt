@@ -1,0 +1,75 @@
+https://nisar1406.medium.com/crud-operations-with-graphql-apollo-server-sequelize-auto-f6c334c41506
+
+
+  315  npm install --save nodemon
+  316  npm install --save-dev @babel/node
+  317  npm run server
+  318  npm install sequelize-auto sequelize-cli sequelize-g
+  319  npm install apollo-server graphql mssql mssql2--save
+  320  npm install apollo-server graphql mssql mssql2 --save
+  321  npm install nodemon -D
+  322  ls
+  323  sequelize init:config
+  324  npm install sequelize-cli
+  325  npm install -g sequelize-cli
+  326  sequelize
+  327  ./sequelize
+  328  sudo npm install -g sequelize-cli
+  329  sequelize
+  330  sequelize init:config
+  331  sudo npm install sequelize-auto sequelize-cli sequelize  -g
+  332  sequelize
+  333  sequelize init:config
+  334  sequelize init:models
+
+
+config.json
+ubuntu@ip-172-31-33-160:~/graphbook/config$
+
+ubuntu@ip-172-31-33-160:~/graphbook/config$ cat config.json
+{
+  "development": {
+    "username": "pmauser",
+    "password": "JunkcrunkJunkcrunk22$$",
+    "database": "graphbook_dev",
+    "host": "localhost",
+    "dialect": "mysql"
+  }
+}
+
+
+
+
+
+
+ubuntu@ip-172-31-33-160:~/graphbook  sequelize-auto -o "./models" -d graphbook_dev -h localhost -u pmauser -p 3306 -x 'JunkcrunkJunkcrunk22$$' -e mysql
+
+
+
+
+ npm start
+
+> graphbook@1.0.0 start /home/ubuntu/graphbook
+> node server.js
+
+🚀 Server ready at http://localhost:5000/
+Executing (default): SELECT `user_id`, `username`, `password`, `age`, `createdAt`, `updatedAt` FROM `userAls` AS `userAls`;
+Executing (default): SELECT `user_id`, `username`, `password`, `age`, `createdAt`, `updatedAt` FROM `userAls` AS `userAls`;
+Executing (default): SELECT `user_id`, `username`, `password`, `age`, `createdAt`, `updatedAt` FROM `userAls` AS `userAls`;
+Executing (default): SELECT `user_id`, `username`, `password`, `age`, `createdAt`, `updatedAt` FROM `userAls` AS `userAls`;
+Executing (default): SELECT `user_id`, `username`, `password`, `age`, `createdAt`, `updatedAt` FROM `userAls` AS `userAls`;
+Executing (default): SELECT `user_id`, `username`, `password`, `age`, `createdAt`, `updatedAt` FROM `userAls` AS `userAls`;
+Executing (default): SELECT `user_id`, `username`, `password`, `age`, `createdAt`, `updatedAt` FROM `userAls` AS `userAls`;
+Executing (default): SELECT `user_id`, `username`, `password`, `age`, `createdAt`, `updatedAt` FROM `userAls` AS `userAls`;
+
+
+
+
+
+
+
+
+ubuntu@ip-172-31-33-160:~/graphbook$ curl --request POST   --header 'content-type: application/json'   --url 'http://ec2-35-85-30-254.us-west-2.compute.amazonaws.com:5000/graphql'   --data '{"query":"{ getUsers { user_id }}"}'
+{"data":{"getUsers":[{"user_id":1},{"user_id":2},{"user_id":3}]}}
+
+

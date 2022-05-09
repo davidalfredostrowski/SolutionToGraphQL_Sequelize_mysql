@@ -1,0 +1,10 @@
+
+{
+  "development": {
+    "username": "pmauser",
+    "password": "JunkcrunkJunkcrunk22$$",
+    "database": "graphbook_dev",
+    "host": "localhost",
+    "dialect": "mysql"
+  }
+}
